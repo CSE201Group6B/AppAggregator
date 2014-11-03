@@ -1,0 +1,20 @@
+.mode columns
+.headers on
+CREATE TABLE APPS
+(Name		VARCHAR(25)		NOT NULL,
+Developer	VARCHAR(25)		NOT NULL,
+Price		DECIMAL			NOT NULL,
+Platform	VARCHAR(20)		NOT NULL,
+Purchase Link	VARCHAR(75),
+PRIMARY KEY(Name)
+);
+CREATE TABLE ACCOUNTS
+(Name		VARCHAR(25)		NOT NULL,
+Administrator	INT			NOT NULL,
+Moderator	INT			NOT NULL,
+PRIMARY KEY(Name)
+);
+INSERT INTO apps VALUES ('Test App One', 'Testers Inc.', 2.99, 'Android', null);
+INSERT INTO apps VALUES ('Test App Two', 'Testers Corp.', 0.00, 'iOS', null);
+INSERT INTO accounts VALUES ('Kyle B.', 1, 0);
+INSERT INTO accounts VALUES ('Fake Moderator', 0, 1);
