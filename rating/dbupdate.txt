@@ -1,0 +1,16 @@
+<?php
+
+//receive information sent by post method
+$Rating = $_POST[Rating];
+
+//select database
+mysql_select_db("my_database");
+
+//insert values
+$insert_query = "INSERT INTO Users (Rating) VALUES ('$Rating')";
+mysql_query($insert_query);
+
+//close MySQL
+mysql_close($sql);
+
+?>
