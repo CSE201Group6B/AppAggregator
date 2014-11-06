@@ -39,10 +39,10 @@ class AppsController < ApplicationController
     @apps.link = params[:apps][:link]
     
       if @apps.save
-        flash[:notice] = "Succesfully saved app"
-        redirect_to "/apps/"
+        flash[:notice] = "Succesfully updated app"
+        redirect_to "/apps/#{@apps.id}"
       else
-        flash[:notice] = "Failed to save app"
+        flash[:notice] = "Failed to save app, please try again."
         redirect_to "/#{@apps.id}/edit"
       end
       return
