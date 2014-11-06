@@ -1,0 +1,54 @@
+ 
+ body{
+	background-color:#c6e2ff;
+ }
+ 
+ #title{
+	font-size: 25px;
+	margin-left: 700px;
+ }
+ 
+ #search{
+	margin:25px
+ 
+ 
+ }
+ 
+.block{
+	background-color:#ff8080;
+	width: 700px;
+	height: 600px;
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-align: center;
+
+}
+.win{
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	border-radius:5px;
+	border: 2px solid black;
+	background-color:#ff8080;
+}
+
+
+
+#AS{
+	margin: 25px;
+}
+#GP{
+	margin: 25px;
+}
+#ASWin{
+	margin-left: 125px;
+	margin-right: 100px;
+}
+
+#GPWin{
+	margin-left: 125px;
+	margin-right: 100px;
+
+}
+
