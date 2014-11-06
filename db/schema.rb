@@ -22,4 +22,15 @@ ActiveRecord::Schema.define(version: 1) do
     t.datetime "updated_at"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.integer  "permissions" # 0 for administrators, 1 for moderators, 2 for normal users
+  end
+  
+  create_table "comments", force: true do |t|
+    t.string   "commentor"
+    t.string   "comment"
+    t.integer  "appID"
+  end
 end
