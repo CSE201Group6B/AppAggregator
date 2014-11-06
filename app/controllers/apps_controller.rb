@@ -23,7 +23,7 @@ class AppsController < ApplicationController
     
   end
   def edit #get
-    @apps = App.find(params[:id]) rescue nil
+    @apps = App.find(params[:id])
     
   end
   def update #post
