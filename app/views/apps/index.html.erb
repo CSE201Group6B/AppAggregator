@@ -1,0 +1,11 @@
+<%= link_to "Add new app", :action => :new %>
+<h2>Listing all apps</h2>
+<% @apps.each do |app| %>
+<p>
+	Name: <%= app.name %>
+	Developer: <%= app.developer %>
+	Price: <%= app.price %>
+	Link: <%= app.link %>
+	<a href= "/apps/<%= app.id %>/edit">Edit</a>
+</p>
+<% end %>
