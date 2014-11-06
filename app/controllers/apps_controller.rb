@@ -6,6 +6,9 @@ class AppsController < ApplicationController
   def new #get
     @apps = App.new
   end
+  def show
+    @apps = App.find(params[:id])
+  end
   def create #post
     @apps = App.new
     @apps.name = params[:apps][:name]
