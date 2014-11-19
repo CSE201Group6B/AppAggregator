@@ -9,19 +9,39 @@
 	<body>
 		
 		
-		<p id = "title">App Aggregator</p>
+		<h1 id = "title">App Aggregator</h1>
+		<!--<form>
+			Search:<br>
+			<input class = "box" type="text" name="firstname" value="Search">
+			<br>
+			<button class = "box" type="button" onclick="myFunction()">Click Me!</button>
+		</form> 
 		
+		<button type="button" onclick="myFunction()">Click Me!</button>
+		!-->
 		
-		<form id = "search">
-			Search: <input type="text" name="firstname"><br>
-		</form>
+		<div class = "block" id = "AS">
+			<p id = "demo"></p>
+		</div>
+		<div class = "block" id = "GP">
+			<p id = "demo"></p>
+		</div>
 		
-		
-		<div class = "block" id = "AS">	AS</div>
-		<div class = "block" id = "GP">GP</div>
+		<form>
+			<br>
+			<input class = "box" type="text" name="firstname" value="">
+			<br>
+			<button class = "box" type="button" onclick="myFunction()">Search</button>
+		</form> 
 	
-		<div class = "win" id = "ASWin"></div>
-		<div class = "win" id = "GPWin"></div>
+		<iframe src="http://www.reddit.com/"></iframe>
+		
+		<script>
+		
+		function myFunction(){
+			document.getElementById("demo").innerHTML = "Hello World!<br>";
+		}
+		</script>
 	
 	
 	

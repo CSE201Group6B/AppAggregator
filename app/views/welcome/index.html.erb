@@ -1,14 +1,28 @@
 <% content_for :title, "Greatest Web Site of All Time" %>
 <h1>Welcome to the App Aggregator!</h1>
 
-
 <p>
 	<a href="/apps/">View all apps</a>
 </p>
-
-<style>
-body{
-	background-color: #ffff99;
-}
+<div class = "block" id = "AS">
+			<p id = "demo"></p>
+		</div>
+		<div class = "block" id = "GP">
+			<p id = "demo"></p>
+		</div>
+		
+		<form>
+			<br>
+			<input class = "box" type="text" name="firstname" value="">
+			<br>
+			<button class = "box" type="button" onclick="myFunction()">Search</button>
+		</form> 
 	
-</style>
+		<iframe src="http://www.reddit.com/"></iframe>
+		
+	 	<script>
+		
+		function myFunction(){
+			document.getElementById("demo").innerHTML = "Hello World!<br>";
+		}
+		</script>
