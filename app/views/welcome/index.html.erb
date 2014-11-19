@@ -24,10 +24,20 @@
 	
 <div class = "block" id = "AS">
 		<p id = "demo"></p>
+	<% unless @apps.nil? %>
+	<% @apps.each do |app| %>
+		<%= app.appStore? ? "" : link_to(app.name,:controller => :apps, :action => :show, id: app) %>
+		<% end %>
+	<% end %>
 </div>
 		
 <div class = "block" id = "GP">
 	<p id = "demo"></p>
+	<% unless @apps.nil? %>
+	<% @apps.each do |app| %>
+		<%= app.appStore? ? link_to(app.name, :action => :show, id: app) : ""%>
+		<% end %>
+	<% end %>
 </div>
 		
 		

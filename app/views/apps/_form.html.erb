@@ -5,6 +5,8 @@
 	Developer: <%= f.text_field :developer %><br/>
 	Price: <%= f.text_field :price %><br/>
 	Link: <%= f.text_field :link%><br/>
+	Apple app store <%= f.radio_button :appStore, false %></br>
+	Play store <%= f.radio_button :appStore, true %></br>
 </p>
 <%= f.submit "Submit" %>
 <% end %>
