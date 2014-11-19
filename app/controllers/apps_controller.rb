@@ -1,7 +1,9 @@
 class AppsController < ApplicationController
   def index
-    @apps= App.all
-    
+    #@apps= App.all
+    unless params[:appName].nil?
+      @apps = App.where("name like %?%", params[:appName]).to_a
+    end
   end
   def new #get
     @apps = App.new

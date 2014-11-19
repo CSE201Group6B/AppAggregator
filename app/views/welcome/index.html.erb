@@ -1,22 +1,36 @@
 <% content_for :title, "Greatest Web Site of All Time" %>
+
+
+<link type="text/css" rel="stylesheet" href="Project1.css"/>
+
 <h1>Welcome to the App Aggregator!</h1>
 
 <p>
 	<a href="/apps/">View all apps</a>
 </p>
-<div class = "block" id = "AS">
-			<p id = "demo"></p>
-		</div>
-		<div class = "block" id = "GP">
-			<p id = "demo"></p>
-		</div>
-		
-		<form>
+<!--<form>
 			<br>
 			<input class = "box" type="text" name="firstname" value="">
 			<br>
 			<button class = "box" type="button" onclick="myFunction()">Search</button>
-		</form> 
+</form> 
+!-->
+
+<%= form_tag("/", {:method => :get}) do %>
+	<%= text_field_tag :appName%>
+	<%= submit_tag "Submit"%>
+<% end %>
+	
+	
+<div class = "block" id = "AS">
+		<p id = "demo"></p>
+</div>
+		
+<div class = "block" id = "GP">
+	<p id = "demo"></p>
+</div>
+		
+		
 	
 		<iframe src="http://www.reddit.com/"></iframe>
 		

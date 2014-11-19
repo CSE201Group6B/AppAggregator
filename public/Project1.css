@@ -1,6 +1,6 @@
  
  body{
-	background-color:#c6e2ff;
+	background-color:#e0e0d1;
  }
  
  iframe{
@@ -53,11 +53,13 @@
 
 
 #AS{
+	background-color: #c6e2ff;
 	margin: 25px;
 	margin-right: 12.5px;
 	float: left;
 }
 #GP{
+	background-color: #ccff66;
 	margin: 25px;
 	margin-left: 12.5px;
 	float: right;
