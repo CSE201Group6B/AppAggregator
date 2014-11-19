@@ -1,0 +1,2 @@
+This is the Help Doc for the AppAggregator.
+If you are experiencing issues with the AppAggregator this is the place to come to.
