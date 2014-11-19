@@ -5,6 +5,7 @@ class AddTableApps < ActiveRecord::Migration
       t.column :developer, :string
       t.column :price, :decimal
       t.column :link, :string
+      t.column :appStore, :boolean
       
       t.timestamps
       

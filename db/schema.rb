@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20141119074941) do
     t.string   "developer"
     t.decimal  "price"
     t.string   "link"
+    t.boolean  "appStore"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
