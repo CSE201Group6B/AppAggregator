@@ -1,2 +1,12 @@
 This is the Help Doc for the AppAggregator.
 If you are experiencing issues with the AppAggregator this is the place to come to.
+
+Introduction
+--------------------------------
+Welcome to the AppAggregator. The purpose of this web application
+is to compare and contrast the apps across the Apple App Store and 
+the Google Play Store. Without signing in with an account you will 
+be able to search for an app, read the comments of an app, and follow 
+the link to the app's store. If you would like to have access to the 
+additional features of AppAggregator please create an account by 
+clicking the "sign up" button. 
