@@ -24,6 +24,7 @@
 	
 <div class = "block" id = "AS">
 		<p id = "demo"></p>
+	<h2> Apple app store results </h2>
 	<% unless @apps.nil? %>
 	<% @apps.each do |app| %>
 		<%= app.appStore? ? "" : link_to(app.name,:controller => :apps, :action => :show, id: app) %>
@@ -33,6 +34,7 @@
 		
 <div class = "block" id = "GP">
 	<p id = "demo"></p>
+	<h2> Play store results</h2>
 	<% unless @apps.nil? %>
 	<% @apps.each do |app| %>
 		<%= app.appStore? ? link_to(app.name, :action => :show, id: app) : ""%>
@@ -42,7 +44,7 @@
 		
 		
 	
-		<iframe src="http://www.reddit.com/"></iframe>
+		
 		
 	 	<script>
 		
