@@ -16,6 +16,7 @@ class AppsController < ApplicationController
     @apps.developer = params[:apps][:developer]
     @apps.price = params[:apps][:price]
     @apps.link = params[:apps][:link]
+    @apps.appStore = params[:apps][:appStore]
     
     if @apps.save
       flash[:notice] = "Succesfully saved new app"
@@ -38,6 +39,7 @@ class AppsController < ApplicationController
     @apps.developer = params[:apps][:developer]
     @apps.price = params[:apps][:price]
     @apps.link = params[:apps][:link]
+    @apps.appStore = params[:apps][:appStore]
     
       if @apps.save
         flash[:notice] = "Succesfully updated app"
