@@ -1,0 +1,17 @@
+<% content_for :title, "Nice app!" %>
+<%= form_tag :action => :show, :id => @apps do %>
+	<h1>
+		<%= @apps.name %>
+	</h1>
+	
+	<h3>
+		<a href= "/apps/<%= @apps.id %>/edit/">Update app</a>
+	</h3>
+	<p>
+		Developer: <%= @apps.developer %></br>
+		Price: <%= @apps.price %></br>
+		<a href= <%= @apps.link %>>Link</a></br></br>
+		<a href = "/apps/">Return to apps page</a>
+	</p>
+<% end %>
+

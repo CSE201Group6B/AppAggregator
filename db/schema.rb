@@ -19,13 +19,14 @@ ActiveRecord::Schema.define(version: 20141119074941) do
     t.decimal  "price"
     t.string   "link"
     t.boolean  "appStore"
+    t.boolean  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", force: true do |t|
     t.string   "commentor"
-    t.string   "comment"
+    t.text     "comment"
     t.integer  "appID"
     t.datetime "created_at"
     t.datetime "updated_at"

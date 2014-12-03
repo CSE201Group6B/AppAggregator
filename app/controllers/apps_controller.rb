@@ -1,7 +1,7 @@
 class AppsController < ApplicationController
   def index
     @apps= App.all
-   
+       
     
   end
   def new #get
@@ -9,6 +9,8 @@ class AppsController < ApplicationController
   end
   def show
     @apps = App.find(params[:id])
+    @comments = Comment.where("appId = ?", params[:id]).to_a
+        
   end
   def create #post
     @apps = App.new
@@ -53,4 +55,9 @@ class AppsController < ApplicationController
     flash[:notice] = "Couldn't find an app with that id"
     redirect_to "/"
   end
+  
+  def comment
+    
+  end
 end
+

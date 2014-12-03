@@ -5,12 +5,28 @@
 	</h1>
 	
 	<h3>
-		<a href= "/apps/<%= @apps.id %>/edit/">Update app</a>
-	</h3>
-	<p>
 		Developer: <%= @apps.developer %></br>
 		Price: <%= @apps.price %></br>
 		<a href= <%= @apps.link %>>Link</a></br></br>
 		<a href = "/apps/">Return to apps page</a>
+	</h3>
+	<% if user_signed_in? %>
+		
+	<% end %>
+	<p>
+		<% if user_signed_in? %>
+			ur a faget
+		<% end %>
+		User Comments:
+		
+	<% @comments.each do |comment| %>
+		<p> 
+			Posted by: <%= comment.commentor %> at <%= comment.created_at %></br></br>
+			
+			<%= comment.comment %>
+		</p>
+			
+	<% end %>
+		
 	</p>
 <% end %>
