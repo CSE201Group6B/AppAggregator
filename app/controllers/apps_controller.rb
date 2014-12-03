@@ -10,7 +10,25 @@ class AppsController < ApplicationController
   def show
     @apps = App.find(params[:id])
     @comments = Comment.where("appId = ?", params[:id]).to_a
-        
+    
+  end
+  def post_comment
+    @comment = Comment.new
+    @comment.comment = params[:body]
+    @comment.commentor = current_user.email
+    @comment.appID = params[:id]
+    unless @comment.save
+      flash[:notice] = "rip comment no saverino"
+    end
+    redirect_to :action => :show, :id => params[:id]
+  end
+  def delete_comment
+    @comment = Comment.find(params[:comment_id]) rescue nil
+    unless @comment.nil?
+      @comment.destroy
+      flash[:notice] = "Comment Deleted"
+    end
+    redirect_to "/apps/#{params[:app_id]}"
   end
   def create #post
     @apps = App.new

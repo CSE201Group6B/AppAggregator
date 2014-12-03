@@ -6,11 +6,13 @@ class AddTableApps < ActiveRecord::Migration
       t.column :price, :decimal
       t.column :link, :string
       t.column :appStore, :boolean
-      t.column :approved, :boolean
+      t.column :approved, :boolean, null: false,  default: false
       
       t.timestamps
       
     end
+    
+    
   end
   def self.down
     drop_table :apps

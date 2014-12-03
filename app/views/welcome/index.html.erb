@@ -27,7 +27,7 @@
 	<h2> Apple app store results </h2>
 	<% unless @apps.nil? %>
 	<% @apps.each do |app| %>
-		<%= app.appStore? ? "" : link_to(app.name,:controller => :apps, :action => :show, id: app) %>
+		<%= app.appStore? ? "" : link_to(app.name,:controller => :apps, :action => :show, id: app) %></br>
 		<% end %>
 	<% end %>
 </div>
@@ -37,7 +37,7 @@
 	<h2> Play store results</h2>
 	<% unless @apps.nil? %>
 	<% @apps.each do |app| %>
-		<%= app.appStore? ? link_to(app.name,:controller => :apps,  :action => :show, id: app) : ""%>
+		<%= app.appStore? ? link_to(app.name,:controller => :apps,  :action => :show, id: app) : ""%></br>
 		<% end %>
 	<% end %>
 </div>

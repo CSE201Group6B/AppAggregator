@@ -1,5 +1,4 @@
 <% content_for :title, "Nice app!" %>
-<%= form_tag :action => :show, :id => @apps do %>
 	<h1>
 		<%= @apps.name %>
 	</h1>
@@ -15,7 +14,12 @@
 	<% end %>
 	<p>
 		<% if user_signed_in? %>
-			ur a faget
+			<%= form_tag "/apps/post_comment" do %>
+				Comment on this! </br>
+				<%= text_area_tag :body %>
+				<%= hidden_field_tag :id, @apps.id %>
+				<%= submit_tag "post comment" %>
+			<% end %>	
 		<% end %>
 		User Comments:
 		
@@ -23,10 +27,11 @@
 		<p> 
 			Posted by: <%= comment.commentor %> at <%= comment.created_at %></br></br>
 			
-			<%= comment.comment %>
+			<%= comment.comment %><% if current_user.permissions > 0 %><%= form_tag "/apps/delete_comment" do %><%= hidden_field_tag :app_id, @apps.id %><%= hidden_field_tag :comment_id, comment.id %><%= submit_tag "rip"%>
+			<% end %>
+			<% end %>
 		</p>
 			
 	<% end %>
 		
 	</p>
-<% end %>

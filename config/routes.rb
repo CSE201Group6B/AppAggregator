@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   
   resources :apps
   get '/apps' => 'apps#index'
+  post '/apps/post_comment' => 'apps#post_comment'
+  post '/apps/delete_comment' => 'apps#delete_comment'
   
   
 
