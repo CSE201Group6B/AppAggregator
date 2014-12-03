@@ -8,7 +8,7 @@ class AppsController < ApplicationController
     @apps = App.new
   end
   def show
-    @apps = App.find(params[:id])
+    @apps = App.unscoped.find(params[:id])
     @comments = Comment.where("appId = ?", params[:id]).to_a
     
   end
@@ -37,7 +37,7 @@ class AppsController < ApplicationController
     @apps.price = params[:apps][:price]
     @apps.link = params[:apps][:link]
     @apps.appStore = params[:apps][:appStore]
-    
+    @apps.approved = false
     if @apps.save
       flash[:notice] = "Succesfully saved new app"
       redirect_to "/apps"

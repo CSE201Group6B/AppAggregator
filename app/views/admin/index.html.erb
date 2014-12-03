@@ -1,0 +1,16 @@
+<a href= "/">Main page</a>
+<% content_for :title, "I am the greatest programmer" %>
+<h2>All apps</h2>
+<h4>Click app name for more info</h4>
+
+<p>
+	
+	</br>
+	<% @apps.each do |app| %>
+	</br></br><%= link_to app.name, "/apps/#{app.id}"  %>
+	<% end %>
+	
+	
+</p>
+
+

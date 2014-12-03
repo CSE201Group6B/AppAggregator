@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/apps' => 'apps#index'
   post '/apps/post_comment' => 'apps#post_comment'
   post '/apps/delete_comment' => 'apps#delete_comment'
+  get '/admin/apps' => 'admin#index'
+  get '/admin/approve/:id' => 'admin#approve'
   
   
 

@@ -1,4 +1,7 @@
 <% content_for :title, "Nice app!" %>
+	<% if current_user.permissions > 1 and @apps.approved = false%>
+		<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
+	<% end %>
 	<h1>
 		<%= @apps.name %>
 	</h1>
