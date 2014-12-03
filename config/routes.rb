@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :apps
   get '/apps' => 'apps#index'
   
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

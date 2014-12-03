@@ -56,8 +56,6 @@ class AppsController < ApplicationController
     redirect_to "/"
   end
   
-  def comment
-    
-  end
+  
 end
 
