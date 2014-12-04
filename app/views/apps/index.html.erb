@@ -14,7 +14,9 @@
 	</br>
 	<% end %>
 	<% @apps.each do |app| %>
+	<% if app.approved = 't' %>
 	</br></br><a href= "/apps/<%= app.id %>/"> <%= app.name %> </a> 
+	<% end %>
 	<% end %>
 	
 	

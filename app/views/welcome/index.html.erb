@@ -6,7 +6,11 @@
 <h1>Welcome to the App Aggregator!</h1>
 
 <p>
-	<a href="/apps/">View all apps</a>
+	<a href="/apps/">View all apps</a></br></br>
+	<% if user_signed_in? %>
+		<%= link_to "Add a new app", :action => :new, :controller => :apps %>
+		</br>
+	<% end %>
 </p>
 <!--<form>
 			<br>

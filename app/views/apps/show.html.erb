@@ -1,9 +1,11 @@
 <% content_for :title, "Nice app!" %>
 	<% unless current_user.nil? %>
-	<% if current_user.permissions > 1 and @apps.approved = 0 %>
-		<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
-	<% end %>
-	
+		<% if current_user.permissions > 1 and !@apps.approved %>
+			<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
+		<% end %>
+		<% if current_user.permissions > 1 %>
+			<a href= "/apps/<%= @apps.id %>/edit/">Update app</a>
+		<% end %>
 	<% end %>
 	
 	<h1>
