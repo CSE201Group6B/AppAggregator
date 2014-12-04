@@ -5,7 +5,7 @@
 		<% end %>
 		<% if current_user.permissions > 1 %>
 			<a href= "/apps/<%= @apps.id %>/edit/">Update app</a></br></br>
-			<%= link_to 'Delete this app', @apps.destroy %>
+			
 		<% end %>
 	<% end %>
 	
