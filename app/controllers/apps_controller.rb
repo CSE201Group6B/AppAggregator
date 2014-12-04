@@ -48,7 +48,7 @@ class AppsController < ApplicationController
     
   end
   def delete_app
-    @apps = App.unscoped.find(params[:app_id])
+    @apps = App.unscoped.find(params[:app_id]) rescue nil
     unless @apps.nil?
       @apps.destroy
       flash[:notice] = "App Deleted"
