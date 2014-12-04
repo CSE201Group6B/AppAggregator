@@ -2,8 +2,13 @@
 	<% unless current_user.nil? %>
 		<% if current_user.permissions > 1 and !@apps.approved %>
 			<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
+			<%= form_tag "/apps/delete_app" do %>
+			<%= hidden_field_tag :app_id, @apps.id %>
+			<%= submit_tag "Decline app"%>
+			<% end %>
+			
 		<% end %>
-		<% if current_user.permissions > 1 %>
+		<% if current_user.permissions > 1 and @apps.approved %>
 			<a href= "/apps/<%= @apps.id %>/edit/">Update app</a></br></br>
 			
 		<% end %>

@@ -47,6 +47,14 @@ class AppsController < ApplicationController
     end
     
   end
+  def delete_app
+    @apps = App.unscoped.find(params[:app_id])
+    unless @apps.nil?
+      @apps.destroy
+      flash[:notice] = "App Deleted"
+    end
+    redirect_to "/apps/"
+  end
   def edit #get
     @apps = App.find(params[:id])
     
