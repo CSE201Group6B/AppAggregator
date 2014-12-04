@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/apps/post_comment' => 'apps#post_comment'
   post '/apps/delete_comment' => 'apps#delete_comment'
   get '/admin/apps' => 'admin#index'
-  get '/admin/approve/:id' => 'admin#approve'
+  post '/admin/approve/:id' => 'admin#approve'
   post '/apps/delete_app' => 'apps#delete_app'
   
   
