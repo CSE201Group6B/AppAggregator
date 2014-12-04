@@ -4,7 +4,8 @@
 			<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
 		<% end %>
 		<% if current_user.permissions > 1 %>
-			<a href= "/apps/<%= @apps.id %>/edit/">Update app</a>
+			<a href= "/apps/<%= @apps.id %>/edit/">Update app</a></br></br>
+			<%= link_to 'Delete this app', @apps.destroy %>
 		<% end %>
 	<% end %>
 	

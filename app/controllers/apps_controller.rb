@@ -51,6 +51,7 @@ class AppsController < ApplicationController
     @apps = App.find(params[:id])
     
   end
+ 
   def update #post
     @apps = App.find(params[:id]) rescue nil
   
