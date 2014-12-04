@@ -10,7 +10,6 @@ class AdminController < ApplicationController
   end
   private
   def authorize
-    
     if current_user.nil? or current_user.permissions < 2
       redirect_to '/'
       flash[:notice] = 'You are not an admin!!'
