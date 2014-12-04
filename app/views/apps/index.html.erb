@@ -4,6 +4,11 @@
 <h4>Click app name for more info</h4>
 
 <p>
+	<% unless current_user.nil? %>
+		<% if current_user.permissions > 1 %>
+			<a href = "/admin/apps/"> Approve apps </a></br>
+		<% end %>
+	<% end %>	
 	<%= link_to "Add new app", :action => :new %>
 	</br>
 	<% @apps.each do |app| %>

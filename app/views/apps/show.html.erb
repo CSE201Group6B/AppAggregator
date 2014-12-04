@@ -1,6 +1,8 @@
 <% content_for :title, "Nice app!" %>
+	<% unless current_user.nil?%>
 	<% if current_user.permissions > 1 and @apps.approved = false%>
 		<%= link_to 'Approve this app', "/admin/approve/#{@apps.id}"%>
+	<% end %>
 	<% end %>
 	<h1>
 		<%= @apps.name %>
@@ -30,7 +32,8 @@
 		<p> 
 			Posted by: <%= comment.commentor %> at <%= comment.created_at %></br></br>
 			
-			<%= comment.comment %><% if current_user.permissions > 0 %><%= form_tag "/apps/delete_comment" do %><%= hidden_field_tag :app_id, @apps.id %><%= hidden_field_tag :comment_id, comment.id %><%= submit_tag "rip"%>
+			<%= comment.comment %> <% unless current_user.nil? %><% if current_user.permissions > 0 %><%= form_tag "/apps/delete_comment" do %><%= hidden_field_tag :app_id, @apps.id %><%= hidden_field_tag :comment_id, comment.id %><%= submit_tag "rip"%>
+			<% end %>
 			<% end %>
 			<% end %>
 		</p>
