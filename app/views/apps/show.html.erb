@@ -21,11 +21,12 @@
 		<% if user_signed_in? %>
 			<%= form_tag "/apps/post_comment" do %>
 				Comment on this! </br>
-				<%= text_area_tag :body %>
-				<%= hidden_field_tag :id, @apps.id %>
-				<%= submit_tag "post comment" %>
+				<%= text_area_tag :body, "",:size => "100x8" %>
+				<%= hidden_field_tag :id, @apps.id %></br>
+				<%= submit_tag "Post Comment" %></br>
 			<% end %>	
 		<% end %>
+		</br>
 		User Comments:
 		
 	<% @comments.each do |comment| %>

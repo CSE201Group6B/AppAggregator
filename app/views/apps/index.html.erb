@@ -9,8 +9,10 @@
 			<a href = "/admin/apps/"> Approve apps </a></br>
 		<% end %>
 	<% end %>	
+	<% if user_signed_in? %>
 	<%= link_to "Add new app", :action => :new %>
 	</br>
+	<% end %>
 	<% @apps.each do |app| %>
 	</br></br><a href= "/apps/<%= app.id %>/"> <%= app.name %> </a> 
 	<% end %>
